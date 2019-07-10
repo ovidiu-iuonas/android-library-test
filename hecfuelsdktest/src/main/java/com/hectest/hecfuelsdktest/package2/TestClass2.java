@@ -1,4 +1,4 @@
-package com.hectest.hecfuelsdktest;
+package com.hectest.hecfuelsdktest.package2;
 
 import android.content.Context;
 import android.util.Log;
@@ -11,11 +11,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-class TestClass2 {
+public class TestClass2 {
 
     private static final String TAG = TestClass2.class.getSimpleName();
 
-    TestClass2(Context context){
+    public TestClass2(Context context){
         doTestRequest(context);
     }
 
