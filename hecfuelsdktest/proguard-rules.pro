@@ -20,4 +20,6 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class TestClass { public protected <methods>; }
+-keep class TestClass { public static <methods>; }
+
+-allowaccessmodification
