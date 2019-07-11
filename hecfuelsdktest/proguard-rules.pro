@@ -20,6 +20,6 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.hectest.hecfuelsdktest.package1.TestClass**
+-keep class com.hectest.hecfuelsdktest.package1
 
--keepclassmembers class com.hectest.hecfuelsdktest.package1.TestClass** {*;}
+-keepclassmembers class com.hectest.hecfuelsdktest.package1 {public *;}
