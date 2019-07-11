@@ -22,4 +22,4 @@
 
 -keep class com.hectest.hecfuelsdktest.package1.TestClass
 
--keepclassmembers class com.hectest.hecfuelsdktest.package1.TestClass {public *;}
+-keepclassmembers class com.hectest.hecfuelsdktest.package1.TestClass {<methods>;}
