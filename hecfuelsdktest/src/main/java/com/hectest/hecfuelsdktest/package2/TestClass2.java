@@ -10,6 +10,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.hectest.hecfuelsdktest.R;
 
 public class TestClass2 {
 
@@ -22,7 +23,7 @@ public class TestClass2 {
     private void doTestRequest(Context context){
         RequestQueue queue = Volley.newRequestQueue(context);
 
-        String testUrl = "https://google.com";
+        String testUrl = context.getResources().getString(R.string.url);
 
         Log.i(TAG, "The test request will be made.");
 
