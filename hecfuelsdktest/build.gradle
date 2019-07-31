@@ -1,7 +1,27 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.ovidiu-iuonas'
 
+ext {
+    bintrayRepo = 'HecFuel'
+    bintrayName = 'com.hectest.hecfuelsdktest'
+
+    libraryName = "hecfuelsdktest"
+
+    publishedGroupId = 'com.hectest.hecfuelsdktest'
+    artifact = 'hecfuelsdk'
+    libraryVersion = '0.1.1'
+
+    libraryDescription = 'Description test'
+    siteUrl = 'https://github.com/ovidiu-iuonas/android-library-test'
+    gitUrl = 'https://github.com/ovidiu-iuonas/android-library-test.git'
+    developerId = 'ovidiuiuonas23'
+    developerName = 'Ovidiu Iuonas'
+    developerEmail = 'ovidiu.iuonas23@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 28
@@ -11,7 +31,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "0.1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -34,4 +54,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'install.gradle'
+    apply from: 'bintray.gradle'
 }
